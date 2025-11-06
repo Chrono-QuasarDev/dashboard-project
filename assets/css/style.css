@@ -23,9 +23,7 @@
   --color-gray-900: #212529;
 
   /* FONT SYSTEM */
-  --font-sans:
-    Inter, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: 'Open Sans', sans-serif;
 
   --fs-xs: 0.75rem; /* 12px */
   --fs-base: 1rem;  /* 16px */
@@ -46,6 +44,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  font-family: var(--font-sans);
+}
+
 img, picture,
 svg {
   display: block;
@@ -63,4 +65,28 @@ ul, ol {
 p, h1, h2,
 h3, h4 {
   overflow-wrap: break-word;
+}
+
+aside, header, main {
+  border: 2px solid salmon;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+aside {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+header {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+main {
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
